@@ -99,17 +99,17 @@ body {
   }
   
   /* Skills section styles */
-  #skills {
+  /* #skills {
     padding: 50px 0;
     background-color: #f9f9f9;
-  }
+  } */
   
-  .skills-card-container {
+  /* .skills-card-container {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
     align-items: flex-start;
-  }
+  } */
   
   /* .skills-card {
     text-align: center;
