@@ -5,7 +5,6 @@ body {
   margin: 0;
   padding: 0;
   letter-spacing: 0.5px;
-  /* background-color: rgb(238, 238, 238); */
 }
 
 /* for aligning everything in middle */
@@ -116,12 +115,13 @@ body {
 /* -----------------Navbar------------------------- */
 
 #nav-menu {
-  margin-top: -20px;
+  /* margin-top: -20px; */
   display: flex;
   justify-content: space-between;
   align-items: center;
   width: 100%;
   color: black;
+  height: 80px;
 }
 
 .logo img {
@@ -193,11 +193,12 @@ body {
 }
 
 #user-detail-name {
-  font-size: 24px;
+  font-size: 40px;
   font-weight: bold;
   margin-bottom: 10px;
+  font-weight: 600;
+  line-height: 1px;
 }
-
 
 
 #user-detail-intro {
@@ -227,8 +228,8 @@ body {
 #socials {
   list-style-type: none;
   display: flex;
-  margin-left: -10%;
-  margin-top: 5%;
+  margin-left: -15%;
+  margin-top: 30%;
 }
 
 #socials li {
