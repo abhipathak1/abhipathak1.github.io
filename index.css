@@ -383,10 +383,11 @@ technical Skills */
   width: 45%;
   padding: 1rem;
   margin-bottom: 30px;
-  border: 2px solid black;
   gap: 20px;
   transition: transform 0.3s cubic-bezier(0.42, 0, 0.58, 1);
-  box-shadow: 0 4px 5px 3px #ce8787;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 8px 24px hsla(210,8%,62%,.2);
 }
 
 .project-card:hover {
@@ -562,3 +563,4 @@ technical Skills */
   grid-row: 2;
   text-align: center;
 }
+
