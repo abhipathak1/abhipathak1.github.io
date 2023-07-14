@@ -189,8 +189,9 @@ body {
 }
 
 .home-img {
-  width: 190px;
-  height: 190px;
+  /* background-color: #4a5a79; */
+  width: 230px;
+  height: 230px;
   border-radius: 50%;
   object-fit: cover;
   margin-bottom: 20px;
