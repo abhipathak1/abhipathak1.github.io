@@ -115,19 +115,23 @@ body {
 /* -----------------Navbar------------------------- */
 
 #nav-menu {
-  /* margin-top: -20px; */
   display: flex;
   justify-content: space-between;
   align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
   width: 100%;
+  /* background-color: rgb(238, 238, 238); */
+  background-color: white;
   color: black;
-  height: 80px;
+  z-index: 1000;
 }
 
 .logo img {
-  width: 110px;
-  height: 99px;
-  margin-left: 10px;
+  width: 60px;
+  height: 54px;
+  margin-left: 20px;
 }
 
 #nav-menu ul {
@@ -135,33 +139,34 @@ body {
   margin: 0;
   padding: 0;
   display: flex;
-  gap: 20px;
 }
-
 
 #nav-menu li {
   padding: 10px;
 }
 
 #nav-menu li a {
+  margin-right: 20px;
   color: black;
-  text-decoration: none;
   cursor: pointer;
-  font-size: 16px;
+  text-decoration: none;
+  font-size: 20px;
+  transition: color 0.3s ease;
   transition: color 0.3s ease, border-bottom-color 0.3s ease;
   border-bottom: 2px solid transparent;
 }
 
 #nav-menu li a:hover {
+  color:#ff7300;
   border-bottom-color: #000;
-}
 
+}
 
 /* ----------------Home section styles---------------------- */
 /* ----------------Home section styles---------------------- */
 
 #home {
-  /* margin-top: 5rem; */
+  margin-top: 5rem;
   padding: 50px 0;
 }
 
@@ -318,7 +323,7 @@ technical Skills */
 }
 
 .skills-card:hover{
-  background: linear-gradient(to right, #647daa, #ffffff); 
+  background: linear-gradient(to left, #768eb9, #ffffff); 
 }
 
 .box22>div>div>img {
