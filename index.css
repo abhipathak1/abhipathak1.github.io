@@ -37,8 +37,6 @@ body {
   align-items: flex-start;
 }
 
-
-
 #Project-tittle {
   max-width: 960px;
   margin: 0 auto;
@@ -395,7 +393,7 @@ technical Skills */
   transition: transform 0.3s cubic-bezier(0.42, 0, 0.58, 1);
   background-color: #fff;
   border-radius: 10px;
-  box-shadow: 0 8px 24px hsla(210,8%,62%,.2);
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 
 .project-card:hover {

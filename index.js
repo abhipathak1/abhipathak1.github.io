@@ -86,5 +86,4 @@ const introElement = document.getElementById("user-detail-intro");
 introElement.textContent = introText;
 introElement.classList.add("typing-animation");
 
-
 typeText();
