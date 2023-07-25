@@ -1,11 +1,13 @@
 /* Global styles */
 
 body {
-  font-family: Arial, sans-serif;
+  /* font-family: Arial, sans-serif; */
   margin: 0;
   padding: 0;
   letter-spacing: 0.5px;
+  font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen,Ubuntu,Cantarell,Fira Sans,Droid Sans,Helvetica Neue,sans-serif;
 }
+
 
 /* for aligning everything in middle */
 
@@ -21,14 +23,13 @@ body {
 
 
 #about-title {
+  font-size: 1.17em;
   max-width: 960px;
   margin: 0 auto;
   display: flex;
   flex-direction: column;
   align-items: flex-end;
   text-align: end;
-  font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen,Ubuntu,Cantarell,Fira Sans,Droid Sans,Helvetica Neue,sans-serif;
-
 }
 
 #Sills-title {
@@ -37,8 +38,6 @@ body {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen,Ubuntu,Cantarell,Fira Sans,Droid Sans,Helvetica Neue,sans-serif;
-
 }
 
 #Project-tittle {
@@ -49,8 +48,6 @@ body {
   align-items: flex-end;
   text-align: end;
   border-radius: 10px;
-  font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen,Ubuntu,Cantarell,Fira Sans,Droid Sans,Helvetica Neue,sans-serif;
-
 }
 
 #git-title {
@@ -59,8 +56,6 @@ body {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen,Ubuntu,Cantarell,Fira Sans,Droid Sans,Helvetica Neue,sans-serif;
-
 }
 
 
@@ -146,7 +141,7 @@ body {
   z-index: 1000;
   color: black;
   background-color: white;
-  /* box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px; */
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px; 
 }
 
 .logo img {
@@ -154,6 +149,8 @@ body {
   height: 50px;
   margin-left: 20px;
 }
+
+
 
 #nav-menu ul {
   list-style: none;
@@ -194,46 +191,6 @@ body {
     width: 100%;
     left: 0;  
 } 
-
-
-/* #nav-menu li a {
-  text-decoration: none;
-  position: relative;
-  margin-right: 20px;
-  color: black;
-  cursor: pointer;
-  font-size: 20px;
-  transition: color 0.3s ease;
-}
-
-#nav-menu li a::after {
-  content: "";
-  display: block;
-  height: 3px;
-  width: 50%;
-  bottom: -2px;
-  background-color: #ff7300;
-  position: absolute;
-  left: 25%;
-  transition: width 0.2s ease-out;
-  border-radius: 50px;
-}
-
-#nav-menu li a::before {
-  content: "";
-  display: block;
-  height: 3px;
-  width: 50%;
-  bottom: -7px; 
-  background-color: #ff7300;
-  position: absolute;
-  left: 25%; 
-  transition: width 0.2s ease-out;
-  border-radius: 50px;
-} */
-
-
-
 
 
 /* ----------------Home section styles---------------------- */
@@ -483,29 +440,80 @@ body {
   margin-bottom: 10px;
 }
 
-.project-card h1 {
-  font-size: 20px;
-  margin-bottom: 5px;
+.project-title{
+  text-align: center;
 }
+
+
 
 .project-card h2 {
   font-size: 16px;
   color: #666;
 }
 
-.deployed-links {
+/* .deployed-links {
   width: 90%;
   font-size: 30px;
   display: flex;
   margin: auto;
   justify-content: space-between;
+} */
+
+
+.tech i{
+  font-size: 27px;
 }
 
-/* .project-section-title {
-  font-size: 28px;
-  text-align: center;
-  margin-bottom: 20px;
-} */
+.tech h1{
+  font-size: .75em;
+  font-weight: 700;
+}
+
+.tech{
+  display: flex;
+  justify-content: space-between;
+}
+
+
+.tech div img {
+  width: 27px;
+  height: 27px; 
+  margin-right: 2px; 
+  transition: filter 0.3s ease; 
+}
+
+
+.project-github-link {
+  filter: brightness(0);
+  transition: filter 0.3s ease; 
+}
+
+.project-github-link:hover {
+  filter: brightness(1); 
+}
+
+.project-deployed-link {
+  filter: brightness(0);
+  transition: filter 0.3s ease; 
+}
+
+.project-deployed-link:hover {
+  filter: brightness(1); 
+}
+
+.html-icon:hover {
+  color: #e65100;
+}
+
+.css-icon:hover {
+  color: #0277bd;
+}
+
+.js-icon:hover {
+  color: #d9b600; 
+}
+
+
 
 /* ====hanging animation======= */
 .swing {
