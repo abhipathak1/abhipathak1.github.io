@@ -440,25 +440,30 @@ body {
   margin-bottom: 10px;
 }
 
-.project-title{
+.project-title {
   text-align: center;
+  position: relative;
 }
 
+.project-title::after {
+  content: "";
+  display: block;
+  height: 3px;
+  min-width: 130px;
+  background-color: black;
+  position: absolute;
+  left: 50%;
+  bottom: -5px;
+  transform: translateX(-50%); 
+  transition: width 0.2s ease-out;
+  border-radius: 50px;
+}
 
 
 .project-card h2 {
   font-size: 16px;
   color: #666;
 }
-
-/* .deployed-links {
-  width: 90%;
-  font-size: 30px;
-  display: flex;
-  margin: auto;
-  justify-content: space-between;
-} */
-
 
 .tech i{
   font-size: 27px;
