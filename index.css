@@ -257,7 +257,13 @@ body {
 /* About section styles */
 
 .about-content {
-  text-align: center;
+  display: flex;
+  gap: 15px;
+}
+
+.about-content img {
+  max-width: 100%;
+  height: auto;
 }
 
 .about-description {
@@ -265,8 +271,8 @@ body {
   color: #666;
   line-height: 1.5;
   text-align: justify;
+  margin-top: 45px;
 }
-
 
 #resume-button-2 {
   padding: 0.5rem;
@@ -276,13 +282,9 @@ body {
   font-size: 18px;
   color: #ff7300;
   align-items: center;
-}
+} 
 
-
-
-
-/* 
-technical Skills */
+/* technical Skills */
 
 .box22 {
   max-width: 960px;
