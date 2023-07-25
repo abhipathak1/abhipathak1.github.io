@@ -173,12 +173,6 @@ body {
   justify-content: space-between;
 }
 
-#mypic {
-  text-align: center;
-  padding-top: 10px;
-  padding-right: 20px;
-}
-
 
 .profile {
   display: flex;
@@ -187,13 +181,16 @@ body {
 }
 
 .home-img {
-  width: 230px;
-  height: 230px;
+  width: 280px;
+  height: 280px;
   border-radius: 50%;
   object-fit: cover;
   margin-bottom: 20px;
-  /* filter: drop-shadow(0px 10px 55px rgb(0, 45, 90)); */
+  background-color: rgb(241, 241, 241);
+  text-align: center;
+  box-shadow: 0px 10px 55px rgb(232, 235, 238);
 }
+
 
 #user-detail-name {
   font-size: 40px;
@@ -282,7 +279,7 @@ body {
   font-size: 18px;
   color: #ff7300;
   align-items: center;
-} 
+}
 
 /* technical Skills */
 
@@ -566,5 +563,3 @@ body {
     font-size: 16px;
   }
 }
-
-
