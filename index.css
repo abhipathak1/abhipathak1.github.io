@@ -27,6 +27,8 @@ body {
   flex-direction: column;
   align-items: flex-end;
   text-align: end;
+  font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen,Ubuntu,Cantarell,Fira Sans,Droid Sans,Helvetica Neue,sans-serif;
+
 }
 
 #Sills-title {
@@ -35,6 +37,8 @@ body {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+  font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen,Ubuntu,Cantarell,Fira Sans,Droid Sans,Helvetica Neue,sans-serif;
+
 }
 
 #Project-tittle {
@@ -45,6 +49,8 @@ body {
   align-items: flex-end;
   text-align: end;
   border-radius: 10px;
+  font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen,Ubuntu,Cantarell,Fira Sans,Droid Sans,Helvetica Neue,sans-serif;
+
 }
 
 #git-title {
@@ -53,61 +59,78 @@ body {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+  font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen,Ubuntu,Cantarell,Fira Sans,Droid Sans,Helvetica Neue,sans-serif;
+
 }
 
 
-.first-line {
-  width: 200px;
-  border: none;
-  height: 4px;
+/* left-title */
+
+ .left-title {
+  position: relative;
+  
+}
+
+.left-title::after {
+  content: "";
+  display: block;
+  height: 5px;
+  min-width: 150px;
+  bottom: -8px;
   background-color: #ff7300;
-  border-radius: 10px;
+  position: absolute;
+  border-radius: 50px;
 }
 
-/* SecondLine */
-
-.Project-line {
-  width: 80px;
-  border: none;
-  height: 3px;
-  background-color: #000;
-  margin-left: 120px;
-  border-radius: 10px;
-  height: 4px;
+.left-title::before {
+  content: "";
+  display: block;
+  height: 5px;
+  min-width: 50px;
+  bottom: -20px; 
   background-color: #ff7300;
+  position: absolute;
+  transition: width 0.2s ease-out;
+  border-radius: 50px;
+}  
+
+/* right-title */
+
+.right-title {
+  position: relative;
 }
 
-.about-line {
-  width: 80px;
-  border: none;
-  height: 4px;
-  background-color: #000;
-  margin-left: 120px;
-  border-radius: 10px;
+.right-title::after {
+  content: "";
+  right: 0;
+  display: block;
+  height: 5px;
+  min-width: 150px;
+  bottom: -8px;
   background-color: #ff7300;
+  position: absolute;
+  border-radius: 50px;
 }
 
-.Sills-line {
-  width: 80px;
-  border: none;
-  height: 4px;
-  background-color: #000;
-  margin-right: 120px;
-  border-radius: 10px;
-  height: 4px;
+.right-title::before {
+  content: "";
+  right: 0;
+  display: block;
+  height: 5px;
+  min-width: 50px;
+  bottom: -20px; 
   background-color: #ff7300;
-}
+  position: absolute;
+  transition: width 0.2s ease-out;
+  border-radius: 50px;
+}  
 
-.git-line {
-  width: 80px;
-  border: none;
-  height: 4px;
-  background-color: #000;
-  margin-right: 120px;
-  border-radius: 10px;
-  height: 4px;
-  background-color: #ff7300;
-}
+
+
+
+
+
+
 
 /* -----------------Navbar------------------------- */
 /* -----------------Navbar------------------------- */
@@ -143,7 +166,7 @@ body {
   padding: 10px;
 }
 
-#nav-menu li a {
+ #nav-menu li a {
   text-decoration: none;
   position: relative;
   margin-right: 20px;
@@ -170,7 +193,48 @@ body {
 #nav-menu li a:hover::after {
     width: 100%;
     left: 0;  
+} 
+
+
+/* #nav-menu li a {
+  text-decoration: none;
+  position: relative;
+  margin-right: 20px;
+  color: black;
+  cursor: pointer;
+  font-size: 20px;
+  transition: color 0.3s ease;
 }
+
+#nav-menu li a::after {
+  content: "";
+  display: block;
+  height: 3px;
+  width: 50%;
+  bottom: -2px;
+  background-color: #ff7300;
+  position: absolute;
+  left: 25%;
+  transition: width 0.2s ease-out;
+  border-radius: 50px;
+}
+
+#nav-menu li a::before {
+  content: "";
+  display: block;
+  height: 3px;
+  width: 50%;
+  bottom: -7px; 
+  background-color: #ff7300;
+  position: absolute;
+  left: 25%; 
+  transition: width 0.2s ease-out;
+  border-radius: 50px;
+} */
+
+
+
+
 
 /* ----------------Home section styles---------------------- */
 /* ----------------Home section styles---------------------- */
@@ -191,6 +255,8 @@ body {
   flex-direction: column;
   align-items: center;
 }
+
+
 
 .home-img {
   width: 280px;
@@ -435,11 +501,11 @@ body {
   justify-content: space-between;
 }
 
-.project-section-title {
+/* .project-section-title {
   font-size: 28px;
   text-align: center;
   margin-bottom: 20px;
-}
+} */
 
 /* ====hanging animation======= */
 .swing {
@@ -578,3 +644,7 @@ body {
     font-size: 16px;
   }
 }
+
+
+
+
