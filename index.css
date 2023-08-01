@@ -318,13 +318,14 @@ body {
 .about-content .left-div {
   animation: slide-in-left 1s forwards;
 }
-.right-div img{
+
+.right-div img {
   width: 2000px;
   height: 300px;
 }
 
 .about-content .right-div {
-  
+
   animation: slide-in-right 1s forwards;
 }
 
@@ -575,7 +576,7 @@ body {
 /* gitHub streak stats  */
 
 .github {
-  width: 50%;
+  width: 58%;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   margin: auto;
@@ -685,16 +686,18 @@ body {
 
 /* dark mode slider  */
 input {
-  --s: 25px; /* adjust this to control the size*/
-  
+  --s: 25px;
+  /* adjust this to control the size*/
+
   height: calc(var(--s) + var(--s)/5);
-  width: auto; /* some browsers need this */
+  width: auto;
+  /* some browsers need this */
   aspect-ratio: 2.25;
   border-radius: var(--s);
   margin: calc(var(--s)/2);
   display: grid;
   cursor: pointer;
-  background-color:#ff7a7a;
+  background-color: #ff7a7a;
   box-sizing: content-box;
   overflow: hidden;
   transition: .3s .1s;
@@ -703,22 +706,25 @@ input {
   appearance: none;
   margin-top: 20px;
 }
-input:before{
+
+input:before {
   content: "";
   padding: calc(var(--s)/10);
-  --_g: radial-gradient(circle closest-side at calc(100% - var(--s)/2) 50%,#000 96%,#0000);
-  background: 
-    var(--_g) 0 /var(--_p,var(--s)) 100% no-repeat content-box,
-    var(--_g) var(--_p,0)/var(--s)  100% no-repeat content-box,
+  --_g: radial-gradient(circle closest-side at calc(100% - var(--s)/2) 50%, #000 96%, #0000);
+  background:
+    var(--_g) 0 /var(--_p, var(--s)) 100% no-repeat content-box,
+    var(--_g) var(--_p, 0)/var(--s) 100% no-repeat content-box,
     #fff;
   mix-blend-mode: darken;
   filter: blur(calc(var(--s)/12)) contrast(11);
   transition: .4s, background-position .4s .1s,
-    padding cubic-bezier(0,calc(var(--_i,-1)*200),1,calc(var(--_i,-1)*200)) .25s .1s;
+    padding cubic-bezier(0, calc(var(--_i, -1)*200), 1, calc(var(--_i, -1)*200)) .25s .1s;
 }
+
 input:checked {
   background-color: #85ff7a;
 }
+
 input:checked:before {
   padding: calc(var(--s)/10 + .05px) calc(var(--s)/10);
   --_p: 100%;
@@ -728,67 +734,105 @@ input:checked:before {
 
 /* Dark mode */
 body.dark-mode {
-  background-color: #17202a; /* Dark blue-gray background color */
-  color: #dcdde1; /* Light gray text color */
+  background-color: #17202a;
+  /* Dark blue-gray background color */
+  color: #dcdde1;
+  /* Light gray text color */
 }
 
 .dark-mode #nav-menu {
-  background-color: #1f2c38; /* Dark blue background color */
-  color: #dcdde1; /* Light gray text color */
+  background-color: #1f2c38;
+  /* Dark blue background color */
+  color: #dcdde1;
+  /* Light gray text color */
 }
 
 .dark-mode #nav-menu li a {
-  color: #dcdde1; /* Light gray text color */
+  color: #dcdde1;
+  /* Light gray text color */
 }
 
 .dark-mode #github-home {
-  color: #dcdde1; /* Light gray text color */
+  color: #dcdde1;
+  /* Light gray text color */
 }
 
 .dark-mode .section-title {
-  color: #dcdde1; /* Light gray text color */
+  color: #dcdde1;
+  /* Light gray text color */
 }
 
 .dark-mode #skills {
-  background-color: #17202a; /* Dark blue-gray background color */
+  background-color: #17202a;
+  /* Dark blue-gray background color */
 }
 
 .dark-mode .skills-card {
-  background-color: #dee4ea; /* Teal-blue background color */
+  background-color: #dee4ea;
+  /* Teal-blue background color */
 }
 
 .dark-mode .skills-card:hover {
-  background-color: #4e6d8c; /* Lighter teal-blue background color */
-  color: #17202a; /* Dark blue-gray text color */
+  background-color: #4e6d8c;
+  /* Lighter teal-blue background color */
+  color: #17202a;
+  /* Dark blue-gray text color */
 }
 
 .dark-mode #projects {
-  background-color: #17202a; /* Dark blue-gray background color */
+  background-color: #17202a;
+  /* Dark blue-gray background color */
 }
 
 .dark-mode .project-card {
-  background-color: #17202a; /* Dark blue-gray background color */
+  background-color: #17202a;
+  /* Dark blue-gray background color */
   box-shadow: 0 2px 5px rgba(220, 221, 225, 0.2);
 }
 
+.dark-mode .project-title::after {
+  background-color: white;
+}
+
 .dark-mode .project-card:hover {
-  box-shadow: 0 6px 10px #dcdde1; /* Light gray box shadow */
+  box-shadow: 0 6px 10px #dcdde1;
+  /* Light gray box shadow */
 }
 
 .dark-mode .techs {
-  color: #dcdde1; /* Light gray text color */
+  color: #dcdde1;
+  /* Light gray text color */
 }
 
 .dark-mode .project-description {
-  color: #dcdde1; /* Light gray text color */
+  color: #dcdde1;
+  /* Light gray text color */
 }
 
 .dark-mode #contact {
-  background-color: #17202a; /* Dark blue-gray background color */
+  background-color: #17202a;
+  /* Dark blue-gray background color */
 }
 
+.dark-mode .project-github-link {
+  filter: brightness(5);
+  transition: filter 0.3s ease;
+}
 
+.dark-mode .project-github-link:hover {
+  filter: brightness(1);
+  cursor: pointer;
+}
 
+.dark-mode .project-deployed-link {
+  filter: brightness(5);
+  transition: filter 0.3s ease;
+}
+
+.dark-mode .project-deployed-link:hover {
+  filter: brightness(1);
+  cursor: pointer;
+}
 
 
 
@@ -911,7 +955,7 @@ body.dark-mode {
     margin-left: -20px;
   }
 
-  input{
+  input {
     width: 60px;
     height: 30px;
     margin-left: 20px;
@@ -963,15 +1007,17 @@ body.dark-mode {
 
   #about {
     margin-left: 10px;
-    
+
   }
-  .about-content{
+
+  .about-content {
     width: 375px;
     margin-left: 20%;
     display: flex;
     flex-direction: column-reverse;
   }
-  .about-description{
+
+  .about-description {
     min-width: 425px;
     font-size: 23px;
     text-align: justify;
@@ -1009,10 +1055,10 @@ body.dark-mode {
   .Project {
     margin-left: 20px;
     display: grid;
-    grid-template-columns: repeat(1,1fr);
+    grid-template-columns: repeat(1, 1fr);
   }
 
-  .project-card{
+  .project-card {
     min-width: 425px;
     margin-left: 15px;
   }
@@ -1043,11 +1089,8 @@ body.dark-mode {
     margin-left: -70px;
   }
 
-  #contact{
+  #contact {
     min-width: 450px;
     margin-left: 35px;
   }
 }
-
-
-
