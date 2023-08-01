@@ -898,6 +898,10 @@ body.dark-mode {
   }
 }
 
+
+
+
+
 @media all and (min-width: 320px) and (max-width:767px) {
   .logo {
     width: 10px;
@@ -953,7 +957,7 @@ body.dark-mode {
 
   #about-title {
     min-width: 375px;
-    margin-left: 40%;
+    margin-left: 36%;
   }
 
   #about {
@@ -971,7 +975,7 @@ body.dark-mode {
     font-size: 23px;
     text-align: justify;
     margin-top: -20px;
-    margin-left: -25px;
+    margin-left: -37px;
   }
 
   #Sills-title {
@@ -998,7 +1002,7 @@ body.dark-mode {
 
   #pp {
     min-width: 375px;
-    margin-left: 40%;
+    margin-left: 36%;
   }
 
   .Project {
