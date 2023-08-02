@@ -853,7 +853,6 @@ body.dark-mode {
 
 
 /* Responsive styles for tablet Screen */
-/* 
 @media all and (min-width: 768px) and (max-width:1023px) {
   .logo {
     width: 30px;
@@ -885,6 +884,7 @@ body.dark-mode {
   }
 
   #about {
+    /* border: 2px solid red; */
     margin-left: 20px;
   }
 
@@ -940,13 +940,13 @@ body.dark-mode {
   .github div:nth-child(3) {
     margin-left: -50px;
   }
-} */
+}
 
 
 
 
 /* Responsive styles for Mobile Screen */
-/* 
+
 @media screen and (max-width: 767px) {
   .logo {
     width: 10px;
@@ -1093,4 +1093,4 @@ body.dark-mode {
     min-width: 450px;
     margin-left: 35px;
   }
-} */
+}
