@@ -835,7 +835,9 @@ body.dark-mode {
 }
 
 
-
+.dark-mode .contact-list li a{
+  color: #dcdde1;
+}
 
 
 
