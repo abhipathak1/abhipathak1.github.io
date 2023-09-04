@@ -241,7 +241,7 @@ body {
   font-weight: bold;
   white-space: nowrap;
   overflow: hidden;
-  border-right: 3px solid #10100f;
+  border-right: 3px solid #ff7300;
   color: #ff7300;
 }
 
@@ -838,20 +838,6 @@ body.dark-mode {
 .dark-mode .contact-list li a{
   color: #dcdde1;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 /* Responsive styles for tablet Screen */

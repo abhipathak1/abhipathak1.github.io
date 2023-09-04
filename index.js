@@ -32,11 +32,6 @@ else {
 }
 
 
-
-
-
-
-
 // intro text
 
 const introText = "Java Backend Developer";
