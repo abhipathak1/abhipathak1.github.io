@@ -524,44 +524,7 @@ body {
   transition: filter 0.3s ease;
 }
 
-.tech div img:hover {
-  cursor: pointer;
-}
 
-.project-github-link {
-  filter: brightness(0);
-  transition: filter 0.3s ease;
-}
-
-.project-github-link:hover {
-  filter: brightness(1);
-  cursor: pointer;
-}
-
-.project-deployed-link {
-  filter: brightness(0);
-  transition: filter 0.3s ease;
-}
-
-.project-deployed-link:hover {
-  filter: brightness(1);
-  cursor: pointer;
-}
-
-.html-icon:hover {
-  color: #e65100;
-  cursor: pointer;
-}
-
-.css-icon:hover {
-  color: #0277bd;
-  cursor: pointer;
-}
-
-.js-icon:hover {
-  color: #d9b600;
-  cursor: pointer;
-}
 
 
 
@@ -814,25 +777,8 @@ body.dark-mode {
   /* Dark blue-gray background color */
 }
 
-.dark-mode .project-github-link {
-  filter: brightness(5);
-  transition: filter 0.3s ease;
-}
 
-.dark-mode .project-github-link:hover {
-  filter: brightness(1);
-  cursor: pointer;
-}
 
-.dark-mode .project-deployed-link {
-  filter: brightness(5);
-  transition: filter 0.3s ease;
-}
-
-.dark-mode .project-deployed-link:hover {
-  filter: brightness(1);
-  cursor: pointer;
-}
 
 
 .dark-mode .contact-list li a{
