@@ -524,6 +524,21 @@ body {
   transition: filter 0.3s ease;
 }
 
+.html-icon:hover {
+  color: #e65100;
+  cursor: pointer;
+}
+
+.css-icon:hover {
+  color: #0277bd;
+  cursor: pointer;
+}
+
+.js-icon:hover {
+  color: #d9b600;
+  cursor: pointer;
+}
+
 
 
 
