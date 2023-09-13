@@ -391,16 +391,18 @@ body {
 
 
   animation: wave 3s infinite;
-  animation-delay: calc(0.2s * var(--i));  
+  animation-delay: calc(0.2s * var(--i));
 }
 
 @keyframes wave {
   0% {
     transform: translateY(0);
   }
+
   50% {
     transform: translateY(-5px);
   }
+
   100% {
     transform: translateY(0);
   }
@@ -414,44 +416,6 @@ body {
   max-width: 40px;
   margin-right: 5px;
 }
-
-
-
-
-/* @keyframes pulse {
-
-  0%,
-  7% {
-    transform: rotateZ(0);
-  }
-
-  15% {
-    transform: rotateZ(-10deg);
-  }
-
-  20% {
-    transform: rotateZ(5deg);
-  }
-
-  25% {
-    transform: rotateZ(-5deg);
-  }
-
-  30% {
-    transform: rotateZ(3deg);
-  }
-
-  35% {
-    transform: rotateZ(-2deg);
-  }
-
-  40%,
-  100% {
-    transform: rotateZ(0);
-  }
-} */
-
-
 
 
 /* Projects section styles */
@@ -810,7 +774,7 @@ body.dark-mode {
 
 
 
-.dark-mode .contact-list li a{
+.dark-mode .contact-list li a {
   color: #dcdde1;
 }
 
@@ -1056,4 +1020,13 @@ body.dark-mode {
     min-width: 450px;
     margin-left: 35px;
   }
+}
+
+
+/* transition on scrolling */
+
+#skills , .project-card , .github , #contact {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 0.5s ease, transform 0.5s ease;
 }

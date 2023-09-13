@@ -42,5 +42,34 @@ introElement.classList.add("typing-animation");
 
 
 
+//transition on scrolling
+
+function checkVisibility() {
+  const elementsToAnimate = document.querySelectorAll('#skills , .project-card , .github , #contact');
+
+  elementsToAnimate.forEach((element) => {
+      const elementTop = element.getBoundingClientRect().top;
+      const elementBottom = element.getBoundingClientRect().bottom;
+      const windowHeight = window.innerHeight;
+
+      // Check if element is in the viewport or slightly above/below
+      if (elementTop < windowHeight - 100 && elementBottom > 0) {
+          element.style.opacity = '1';
+          element.style.transform = 'translateY(0)';
+      } else {
+          element.style.opacity = '0';
+          element.style.transform = 'translateY(40px)';
+      }
+  });
+}
+
+// Event listener for scrolling
+window.addEventListener('scroll', checkVisibility);
+
+// Initial check when the page loads
+checkVisibility();
+
+
+
 
 
