@@ -388,8 +388,22 @@ body {
   padding: 5px;
   transform-origin: 50% 5em;
   border-radius: 8px;
-  animation: wiggle 2.3s linear infinite;
-  animation-delay: calc(.3s * var(--i));
+
+
+  animation: wave 3s infinite;
+  animation-delay: calc(0.2s * var(--i));  
+}
+
+@keyframes wave {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-5px);
+  }
+  100% {
+    transform: translateY(0);
+  }
 }
 
 .skills-card:hover {
@@ -404,7 +418,7 @@ body {
 
 
 
-@keyframes wiggle {
+/* @keyframes pulse {
 
   0%,
   7% {
@@ -435,7 +449,7 @@ body {
   100% {
     transform: rotateZ(0);
   }
-}
+} */
 
 
 
