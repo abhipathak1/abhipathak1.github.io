@@ -72,4 +72,15 @@ checkVisibility();
 
 
 
+// for disabling right click
 
+document.addEventListener('contextmenu', function (e) {
+  e.preventDefault();
+});
+
+// Disable F12 key (developer tools)
+document.onkeydown = function (e) {
+  if (e.keyCode == 123) {
+      return false;
+  }
+};
