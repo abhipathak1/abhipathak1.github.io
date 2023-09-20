@@ -750,6 +750,10 @@ body.dark-mode {
   color: #dcdde1;
 }
 
+.dark-mode #nav-toggle-button{
+  color: white;
+}
+
 
 /* Responsive styles for tablet Screen */
 
