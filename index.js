@@ -71,16 +71,19 @@ checkVisibility();
 
 
 
+const toggleButton = document.getElementById('nav-toggle-button');
+const navList = document.getElementById('nav-links');
+const navLinks = document.querySelectorAll('.nav-list a'); // Select all menu links within the nav-list
 
-// for disabling right click
+// Function to toggle the 'active' class for the nav-list
+function toggleNavMenu() {
+    navList.classList.toggle('active');
+}
 
-document.addEventListener('contextmenu', function (e) {
-  e.preventDefault();
+// Add a click event listener to the nav-toggle-button to toggle the menu
+toggleButton.addEventListener('click', toggleNavMenu);
+
+// Add click event listeners to each menu link to close the menu when clicked
+navLinks.forEach((link) => {
+    link.addEventListener('click', toggleNavMenu);
 });
-
-// Disable F12 key (developer tools)
-document.onkeydown = function (e) {
-  if (e.keyCode == 123) {
-      return false;
-  }
-};

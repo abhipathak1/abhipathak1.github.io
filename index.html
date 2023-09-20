@@ -23,26 +23,25 @@
 <body>
     <!-- Navbar -->
     <nav id="nav-menu">
-        <ul>
-            <li class="logo"><img
-                    src="https://cdn.discordapp.com/attachments/758572508911501315/1129308033604923442/ap-letter-logo-design_579179-1040-removebg-preview-removebg-preview.png"
-                    alt="">
-            </li>
-            <label class="switch" title="Dark-Mode" title="Dark-Mode">
+        <ul class="nav-list">
+            <li class="logo"><img src="your-logo-image-url" alt=""></li>
+            <label class="switch" title="Dark-Mode">
                 <input type="checkbox" id="dark-mode-toggle">
             </label>
         </ul>
-        <ul>
+        <button id="nav-toggle-button" class="nav-link">
+            <i class="fas fa-bars"></i> <!-- FontAwesome icon for the menu -->
+        </button>
+        <ul class="nav-list hidden" id="nav-links">
             <li><a href="#home" class="nav-link home">Home</a></li>
             <li><a href="#about" class="nav-link about">About</a></li>
             <li><a href="#skills" class="nav-link skills">Skills</a></li>
             <li><a href="#pp" class="nav-link projects">Projects</a></li>
             <li><a href="#contact" class="nav-link contact">Contact</a></li>
-            <li><a class="nav-link resume"
-                    href="https://drive.google.com/uc?export=download&id=1L1wzxDdw63ikYNVvlOrrOWnI-Hbm_NXD"
-                    target="_blank" id="resume-button-1">Resume</a></li>
+            <li><a class="nav-link resume" href="your-resume-url" target="_blank" id="resume-button-1">Resume</a></li>
         </ul>
     </nav>
+    
 
 
     <!-- Home Section -->
@@ -61,8 +60,8 @@
                             <li><a href="https://www.linkedin.com/in/abhay-pathak-824070257/"><i
                                         class="fa-brands fa-linkedin" style="color: #ff7300;" title="Linkedin"></i></a>
                             </li>
-                            <li><a href="https://github.com/abhipathak1"><i class="fa-brands fa-github" style="color: #ff7300;"
-                                        title="github"></i></a>
+                            <li><a href="https://github.com/abhipathak1"><i class="fa-brands fa-github"
+                                        style="color: #ff7300;" title="github"></i></a>
                             </li>
                         </ul>
                     </div>
@@ -406,30 +405,23 @@
         <div id="git-title">
             <h2 class="left-title">Github Stats</h2>
         </div>
-        <div class="github">
-            <div>
-                <a class="react-activity-calendar" href="https://git.io/streak-stats">
-                    <img id="github-streak-stats"
-                        src="https://github-readme-streak-stats.herokuapp.com/?user=abhipathak1&theme=dark&border_radius=5"
-                        alt="GitHub Streak Stats" />
-                </a>
-            </div>
 
-            <div>
-                <a class="react-activity-calendar" href="https://github.com/abhipathak1/github-readme-stats">
-                    <img id="github-stats-card" src="https://github-readme-stats.vercel.app/api?username=abhipathak1"
-                        alt="GitHub Stats Card" />
-                </a>
-            </div>
+    </div>
 
-            <div>
-                <a class="react-activity-calendar" href="https://github.com/abhipathak1/github-readme-stats">
-                    <img id="github-top-langs"
-                        src="https://github-readme-stats.vercel.app/api/top-langs/?username=abhipathak1"
-                        alt="GitHub Top Langs" />
-                </a>
-            </div>
-        </div>
+    <div class="github">
+        <a href="https://git.io/streak-stats">
+            <img id="github-streak-stats"
+                src="https://github-readme-streak-stats.herokuapp.com/?user=abhipathak1&theme=dark&border_radius=5"
+                alt="GitHub Streak Stats" />
+        </a>
+        <a href="https://github.com/abhipathak1/github-readme-stats">
+            <img id="github-stats-card" src="https://github-readme-stats.vercel.app/api?username=abhipathak1"
+                alt="GitHub Stats Card" />
+        </a>
+        <a href="https://github.com/abhipathak1/github-readme-stats">
+            <img id="github-top-langs" src="https://github-readme-stats.vercel.app/api/top-langs/?username=abhipathak1"
+                alt="GitHub Top Langs" />
+        </a>
     </div>
 
 
@@ -450,7 +442,8 @@
                         8810594001</a></li>
             </ul>
             <ul id="foot-socials">
-                <li><a href="https://api.whatsapp.com/send?phone=918810594001"><i class="fa-brands fa-whatsapp" style="color: #ff7300;"></i></a>
+                <li><a href="https://api.whatsapp.com/send?phone=918810594001"><i class="fa-brands fa-whatsapp"
+                            style="color: #ff7300;"></i></a>
                 </li>
                 <li><a href=""><i class="fa-brands fa-instagram" style="color: #ff7300;"></i></a>
                 </li>

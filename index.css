@@ -2,6 +2,7 @@
 
 body {
   /* font-family: Arial, sans-serif; */
+  box-sizing: border-box;
   margin: 0;
   padding: 0;
   letter-spacing: 0.2px;
@@ -130,67 +131,37 @@ body {
 /* -----------------Navbar------------------------- */
 /* -----------------Navbar------------------------- */
 
+/* Default styles for navigation */
+
 #nav-menu {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  z-index: 1000;
-  color: black;
-  background-color: white;
-  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  background-color: #fff; /* Adjust as needed */
+  padding: 10px 20px; /* Adjust as needed */
 }
 
-.logo img {
-  width: 60px;
-  height: 50px;
-  margin-left: 20px;
-}
-
-
-
-#nav-menu ul {
+.nav-list {
   list-style: none;
-  margin: 0;
   padding: 0;
+  margin: 0;
   display: flex;
+  align-items: center;
 }
 
-#nav-menu li {
-  padding: 10px;
+.nav-list li {
+  margin: 0 15px; /* Adjust spacing between navigation items */
 }
 
-#nav-menu li a {
+.nav-link {
   text-decoration: none;
-  position: relative;
-  margin-right: 20px;
-  color: black;
-  cursor: pointer;
-  text-decoration: none;
-  font-size: 20px;
-  transition: color 0.3s ease;
+  color: #333; /* Adjust link color */
 }
 
-#nav-menu li a::after {
-  content: "";
-  display: block;
-  height: 3px;
-  width: 0;
-  bottom: -2px;
-  background-color: #ff7300;
-  position: absolute;
-  left: 50%;
-  transition: width 0.2s ease-out;
-  border-radius: 50px;
+#nav-toggle-button{
+  display: none;
 }
 
-#nav-menu li a:hover::after {
-  width: 100%;
-  left: 0;
-}
 
 
 /* ----------------Home section styles---------------------- */
@@ -531,18 +502,12 @@ body {
 
 /* gitHub streak stats  */
 
-.github {
-  width: 58%;
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
+.github{
+  width: 90%;
   margin: auto;
-  text-align: center;
-  gap: 10px;
-  padding-top: 10px;
-}
-
-.github div:nth-child(3) {
-  margin-left: 73%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 /* Contact section styles */
@@ -780,131 +745,120 @@ body.dark-mode {
 
 
 /* Responsive styles for tablet Screen */
-@media all and (min-width: 768px) and (max-width:1023px) {
-  .logo {
-    width: 30px;
-    height: 50px;
-  }
 
-  .switch {
-    margin-left: 60px;
-    width: 70px;
-    height: 25px;
-  }
 
-  #nav-menu li a {
-    font-size: 22px;
-    margin-right: 5px;
-  }
+/* transition on scrolling */
 
-  #home {
-    margin-left: 20px;
-  }
-
-  #mypic img {
-    width: 250px;
-    height: 250px;
-  }
-
-  #about-title {
-    margin-left: 20px;
-  }
-
-  #about {
-    /* border: 2px solid red; */
-    margin-left: 20px;
-  }
-
-  #Sills-title {
-    width: 100%;
-    margin-left: 20px;
-  }
-
-  #skills {
-    margin-left: 20px;
-  }
-
-  #skills div {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-  }
-
-  .skills-card {
-    width: 150px;
-    height: 55px;
-    margin-top: 10px;
-  }
-
-  #pp {
-    margin-left: 20px;
-  }
-
-  .Project {
-    margin-left: 20px;
-  }
-
-  #project {
-    margin-left: 20px;
-  }
-
-  #git-title {
-    margin-left: 20px;
-  }
-
-  .github {
-    display: grid;
-    grid-template-columns: repeat(1, 1fr);
-  }
-
-  .github div:nth-child(1) {
-    margin-left: -50px;
-  }
-
-  .github div:nth-child(2) {
-    margin-left: -50px;
-  }
-
-  .github div:nth-child(3) {
-    margin-left: -50px;
-  }
+#skills , .project-card , .github , #contact {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 0.5s ease, transform 0.5s ease;
 }
 
 
 
 
-/* Responsive styles for Mobile Screen */
 
-@media screen and (max-width: 767px) {
-  .logo {
-    width: 10px;
-    height: 20px;
-    margin-top: -35px;
-    margin-left: -20px;
+
+
+
+
+/* ///////////////// */
+
+
+@media (max-width: 770px) {
+  body {
+    overflow-x: hidden; 
   }
 
-  input {
-    width: 60px;
-    height: 30px;
-    margin-left: 20px;
-  }
+  #nav-links {
+    display: none;
+}
 
-  .switch {
-    margin-left: 50px;
-    margin-top: -30px;
-    width: 20px;
-    height: 25px;
-  }
+/* Button styles */
+#nav-toggle-button {
+  display: block;
+    background-color: transparent;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    font-size: 24px;
+    color: #333; /* Icon color */
+    transition: color 0.3s ease;
+    outline: none;
+}
 
-  #nav-menu ul:nth-child(2) {
-    margin-top: 20px;
-    margin-left: 60px;
-    margin-right: 30px;
-  }
+#nav-toggle-button:hover {
+    color: #555; /* Icon color on hover */
+}
 
-  #nav-menu li a {
-    font-size: 16px;
-    margin-right: -8px;
-  }
+/* Show the nav-list when the 'active' class is added */
+#nav-links.active {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 83px; 
+    width: 100%;
+    left: 0;
+    background-color: #ffffff; /* Adjust as needed */
+    z-index: 1;
+    border-radius: 10px; /* Add some rounded corners to the menu */
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2); /* Add a subtle shadow */
+    
+}
+
+.nav-list.active li {
+    margin: 15px 0; 
+
+}
+
+
+.nav-list.active a {
+  display: block;
+  padding: 10px 0;
+  color: #ff7300;
+  font-size: larger;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+
+
+
+
+.nav-list.active li:not(:last-child) {
+  border-bottom: 3px solid #ff7300;
+  position: relative;
+}
+
+/* Create circular shapes at both ends for the border */
+.nav-list.active li:not(:last-child)::before,
+.nav-list.active li:not(:last-child)::after {
+  content: "";
+  position: absolute;
+  width: 3px; /* Border thickness */
+  height: 3px; /* Border thickness */
+  background-color: #ff7300; /* Border color */
+  border-radius: 50%; /* Circular shape */
+  top: calc(100% - 3px); /* Position at the bottom */
+  transition: background-color 0.3s ease;
+}
+
+/* Position the circular shapes at the beginning and end */
+.nav-list.active li:not(:last-child)::before {
+  left: 0; /* Offset to the left */
+}
+
+.nav-list.active li:not(:last-child)::after {
+  right: 0; /* Offset to the right */
+}
+
+/* Change the color of the circular shapes on hover */
+.nav-list.active li:hover::before,
+.nav-list.active li:hover::after {
+  background-color: #ff9900; /* Border color on hover */
+}
+
 
   #home {
     width: 100%;
@@ -926,40 +880,85 @@ body.dark-mode {
     height: 150px;
     margin-left: 50px;
   }
+}
 
-  #about-title {
-    min-width: 375px;
-    margin-left: 36%;
-  }
-
-  #about {
-    margin-left: 10px;
-
+@media (max-width: 768px) {
+  body {
+    box-sizing: border-box;
+    overflow-x: hidden; /* Prevent horizontal scrolling */
   }
 
   .about-content {
-    width: 375px;
-    margin-left: 20%;
+    width: 100%; /* Use full width for smaller screens */
+    margin-left: 0; 
     display: flex;
-    flex-direction: column-reverse;
+    flex-direction:column-reverse;
   }
 
   .about-description {
-    min-width: 425px;
-    font-size: 23px;
+    min-width: 100%; /* Use full width for smaller screens */
+    font-size: 19px;
     text-align: justify;
     margin-top: -20px;
-    margin-left: -37px;
+    margin-left: 0; /* Remove left margin for smaller screens */
+  }
+.right-div{
+  margin: auto;
+}
+  .right-div img{
+    width: 60%;
   }
 
   #Sills-title {
-    min-width: 100%;
-    margin-left: 20px;
+    min-width: 100%; /* Use full width for smaller screens */
+    margin-left: 0; /* Remove left margin for smaller screens */
   }
 
   #skills {
-    min-width: 450px;
-    margin-left: 35px;
+    min-width: 100%; /* Use full width for smaller screens */
+    margin-left: 0; /* Remove left margin for smaller screens */
+  }
+
+  #skills div {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+  }
+
+  .skills-card {
+    width: 160px;
+    height: 55px;
+    margin-top: 10px;
+  }
+
+  /* Uncomment the following code if you want to make project cards responsive */
+  
+  .Project {
+    flex-direction: column; 
+    align-items: center;
+  }
+
+  .project-card {
+    width: 70%; 
+    margin-bottom: 20px;
+  }
+ 
+}
+
+@media (max-width: 619px) {
+  body {
+    box-sizing: border-box;
+    overflow-x: hidden; /* Prevent horizontal scrolling */
+  }
+
+  #Sills-title {
+    min-width: 100%; /* Use full width for smaller screens */
+    margin-left: 0; /* Remove left margin for smaller screens */
+  }
+
+  #skills {
+    min-width: 100%; /* Use full width for smaller screens */
+    margin-left: 0; /* Remove left margin for smaller screens */
   }
 
   #skills div {
@@ -974,59 +973,92 @@ body.dark-mode {
     margin-top: 10px;
   }
 
-  #pp {
-    min-width: 375px;
-    margin-left: 36%;
-  }
-
   .Project {
-    margin-left: 20px;
-    display: grid;
-    grid-template-columns: repeat(1, 1fr);
+    flex-direction: column; /* Stack project cards vertically on smaller screens */
+    align-items: center; /* Center-align project cards */
   }
 
   .project-card {
-    min-width: 425px;
-    margin-left: 15px;
-  }
-
-
-  #project {
-    margin-left: 20px;
-  }
-
-  #git-title {
-    margin-left: 20px;
-  }
-
-  .github {
-    display: grid;
-    grid-template-columns: repeat(1, 1fr);
-  }
-
-  .github div:nth-child(1) {
-    margin-left: -70px;
-  }
-
-  .github div:nth-child(2) {
-    margin-left: -70px;
-  }
-
-  .github div:nth-child(3) {
-    margin-left: -70px;
-  }
-
-  #contact {
-    min-width: 450px;
-    margin-left: 35px;
+    width: 90%; /* Adjust the width to make it full width on smaller screens */
   }
 }
 
 
-/* transition on scrolling */
 
-#skills , .project-card , .github , #contact {
-  opacity: 0;
-  transform: translateY(40px);
-  transition: opacity 0.5s ease, transform 0.5s ease;
+@media (max-width: 619px) {
+  #home {
+    margin-top: 5rem;
+    padding: 50px 0;
+  }
+  
+  .home-text {
+    display: flex;
+    flex-direction: column;
+  }
+
+
+  
+  
+
+}
+
+
+
+@media (max-width: 619px) {
+  
+  .github {
+    width: 100%; 
+    align-items: center; /* Center-align content vertically */
+    justify-content: center; /* Center-align content horizontally */
+    text-align: center; /* Center-align text within the cards */
+  }
+
+  /* Adjust the card sizes for smaller screens */
+  .github a img {
+    width: 80%; /* Adjust the width of the images */
+    max-width: 500px; /* Set a maximum width to prevent them from becoming too large */
+    height: auto; /* Maintain the aspect ratio */
+  }
+
+}
+@media (max-width: 430px) {
+  #Sills-title {
+    min-width: 100%; /* Use full width for smaller screens */
+    margin-left: 0; /* Remove left margin for smaller screens */
+  }
+
+  #skills {
+    min-width: 100%; /* Use full width for smaller screens */
+    margin-left: 0; /* Remove left margin for smaller screens */
+  }
+
+  #skills div {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    /* gap: 10px; */
+  }
+
+  .skills-card {
+    width: 140px;
+    height: 55px;
+    margin-top: 10px;
+  }
+
+  .github {
+    width: 100%; /* Set the width to 100% for smaller screens */
+    align-items: center; /* Center-align content vertically */
+    justify-content: center; /* Center-align content horizontally */
+    text-align: center; /* Center-align text within the cards */
+  }
+
+  /* Adjust the card sizes for smaller screens */
+  .github a img {
+    width: 90%; /* Adjust the width of the images */
+    max-width: 300px; /* Set a maximum width to prevent them from becoming too large */
+    height: auto; /* Maintain the aspect ratio */
+  }
+  .contact-list{
+    display: block;
+  }
+
 }
