@@ -134,12 +134,18 @@ body {
 /* Default styles for navigation */
 
 #nav-menu {
+  position: fixed; /* Make the navbar fixed */
+  top: 0; /* Position it at the top of the viewport */
+  left: 0; /* Align it to the left */
+  right: 0; /* Align it to the right */
   display: flex;
   justify-content: space-between;
   align-items: center;
   background-color: #fff; /* Adjust as needed */
   padding: 10px 20px; /* Adjust as needed */
+  z-index: 1000; /* Set a high z-index to ensure it's above other content */
 }
+
 
 .nav-list {
   list-style: none;
