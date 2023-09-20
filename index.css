@@ -741,8 +741,9 @@ body.dark-mode {
   /* Dark blue-gray background color */
 }
 
-
-
+.dark-mode #nav-links.active {
+  background-color: rgba(23, 32, 42, 0.99); /* Adjust the opacity value (0.8) as needed */
+}
 
 
 .dark-mode .contact-list li a {
@@ -898,7 +899,7 @@ body.dark-mode {
     width: 100%; /* Use full width for smaller screens */
     margin-left: 0; 
     display: flex;
-    flex-direction:column-reverse;
+    flex-direction: column-reverse;
   }
 
   .about-description {
@@ -908,12 +909,20 @@ body.dark-mode {
     margin-top: -20px;
     margin-left: 0; /* Remove left margin for smaller screens */
   }
-.right-div{
-  margin: auto;
-}
-  .right-div img{
-    width: 60%;
+
+  .right-div {
+    width: 100%; /* Use full width for smaller screens */
+    text-align: center; /* Center-align the content */
   }
+
+  .right-div img {
+    max-width: 60%; /* Adjust the maximum width of the image */
+    height: auto; /* Maintain the aspect ratio */
+    display: block; /* Center the image horizontally */
+    margin: 0 auto; /* Center the image horizontally */
+  }
+
+
 
   #Sills-title {
     min-width: 100%; /* Use full width for smaller screens */
