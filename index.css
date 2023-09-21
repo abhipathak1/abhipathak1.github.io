@@ -134,16 +134,18 @@ body {
 /* Default styles for navigation */
 
 #nav-menu {
-  position: fixed; /* Make the navbar fixed */
-  top: 0; /* Position it at the top of the viewport */
-  left: 0; /* Align it to the left */
-  right: 0; /* Align it to the right */
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: #fff; /* Adjust as needed */
-  padding: 10px 20px; /* Adjust as needed */
-  z-index: 1000; /* Set a high z-index to ensure it's above other content */
+  background-color: #fff;
+  padding: 10px 20px;
+  z-index: 1000;
+  color: black;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 
 
@@ -156,15 +158,47 @@ body {
 }
 
 .nav-list li {
-  margin: 0 15px; /* Adjust spacing between navigation items */
+  margin: 0 15px;
 }
+
+.nav-list li a {
+
+  text-decoration: none;
+  position: relative;
+  margin-right: 20px;
+  color: black;
+  cursor: pointer;
+  text-decoration: none;
+  font-size: 20px;
+  transition: color 0.3s ease;
+
+}
+
+.nav-list li a::after {
+  content: "";
+  display: block;
+  height: 3px;
+  width: 0;
+  bottom: -2px;
+  background-color: #ff7300;
+  position: absolute;
+  left: 50%;
+  transition: width 0.2s ease-out;
+  border-radius: 50px;
+}
+
+.nav-list li a:hover::after {
+  width: 100%;
+  left: 0;
+}
+
 
 .nav-link {
   text-decoration: none;
-  color: #333; /* Adjust link color */
+  color: #333;
 }
 
-#nav-toggle-button{
+#nav-toggle-button {
   display: none;
 }
 
@@ -334,6 +368,7 @@ body {
 
 .box22 {
   max-width: 960px;
+  /* width: 55%; */
   margin: 0 auto;
   margin-top: 40px;
   background: linear-gradient(to right, #03173e, #42609c);
@@ -365,8 +400,6 @@ body {
   padding: 5px;
   transform-origin: 50% 5em;
   border-radius: 8px;
-
-
   animation: wave 3s infinite;
   animation-delay: calc(0.2s * var(--i));
 }
@@ -508,7 +541,7 @@ body {
 
 /* gitHub streak stats  */
 
-.github{
+.github {
   width: 90%;
   margin: auto;
   display: flex;
@@ -742,7 +775,8 @@ body.dark-mode {
 }
 
 .dark-mode #nav-links.active {
-  background-color: rgba(23, 32, 42, 0.99); /* Adjust the opacity value (0.8) as needed */
+  background-color: rgba(23, 32, 42, 0.99);
+  /* Adjust the opacity value (0.8) as needed */
 }
 
 
@@ -750,7 +784,7 @@ body.dark-mode {
   color: #dcdde1;
 }
 
-.dark-mode #nav-toggle-button{
+.dark-mode #nav-toggle-button {
   color: white;
 }
 
@@ -760,7 +794,10 @@ body.dark-mode {
 
 /* transition on scrolling */
 
-#skills , .project-card , .github , #contact {
+#skills,
+.project-card,
+.github,
+#contact {
   opacity: 0;
   transform: translateY(40px);
   transition: opacity 0.5s ease, transform 0.5s ease;
@@ -769,102 +806,57 @@ body.dark-mode {
 
 
 
-
-
-
-
-
-/* ///////////////// */
+/* ////////---- Respnsive ////////----*/
 
 
 @media (max-width: 770px) {
   body {
-    overflow-x: hidden; 
+    overflow-x: hidden;
   }
 
   #nav-links {
     display: none;
-}
+  }
 
-/* Button styles */
-#nav-toggle-button {
-  display: block;
+  /* Button styles */
+  #nav-toggle-button {
+    display: block;
     background-color: transparent;
     border: none;
     padding: 0;
     cursor: pointer;
     font-size: 24px;
-    color: #333; /* Icon color */
-    transition: color 0.3s ease;
     outline: none;
-}
+  }
 
 
-
-/* Show the nav-list when the 'active' class is added */
-#nav-links.active {
+  /* Show the nav-list when the 'active' class is added */
+  #nav-links.active {
     display: flex;
     flex-direction: column;
     position: absolute;
-    top: 83px; 
+    top: 83px;
     width: 100%;
     left: 0;
-    background-color: #ffffff; /* Adjust as needed */
+    background-color: rgba(255, 255, 255, 0.98);
     z-index: 1;
-    border-radius: 10px; /* Add some rounded corners to the menu */
-    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2); /* Add a subtle shadow */
-    
-}
+    border-radius: 10px;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+  }
 
-.nav-list.active li {
-    margin: 15px 0; 
-
-}
+  .nav-list.active li {
+    margin: 15px 0;
+  }
 
 
-.nav-list.active a {
-  display: block;
-  padding: 10px 0;
-  color: #000;
-  font-size: larger;
-  text-decoration: none;
-  transition: color 0.3s ease;
-  
-}
-
-.nav-list.active li:not(:last-child) {
-  border-bottom: 3px solid #ff7300;
-  position: relative;
-}
-
-/* Create circular shapes at both ends for the border */
-.nav-list.active li:not(:last-child)::before,
-.nav-list.active li:not(:last-child)::after {
-  content: "";
-  position: absolute;
-  width: 3px; /* Border thickness */
-  height: 3px; /* Border thickness */
-  background-color: #ff7300; /* Border color */
-  border-radius: 50%; /* Circular shape */
-  top: calc(100% - 3px); /* Position at the bottom */
-  transition: background-color 0.3s ease;
-}
-
-/* Position the circular shapes at the beginning and end */
-.nav-list.active li:not(:last-child)::before {
-  left: 0; /* Offset to the left */
-}
-
-.nav-list.active li:not(:last-child)::after {
-  right: 0; /* Offset to the right */
-}
-
-/* Change the color of the circular shapes on hover */
-.nav-list.active li:hover::before,
-.nav-list.active li:hover::after {
-  background-color: #ff9900; /* Border color on hover */
-}
-
+  .nav-list.active a {
+    display: block;
+    padding: 10px 0;
+    color: #000;
+    font-size: larger;
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
 
   #home {
     width: 100%;
@@ -882,55 +874,57 @@ body.dark-mode {
   }
 
   #mypic img {
-    width: 150px;
-    height: 150px;
-    margin-left: 50px;
+    width: 180px;
+    height: 180px;
+    margin-left: 40px;
+  }
+
+  .box22 {
+    width: 90%;
   }
 }
 
 @media (max-width: 768px) {
   body {
     box-sizing: border-box;
-    overflow-x: hidden; /* Prevent horizontal scrolling */
+    overflow-x: hidden;
   }
 
   .about-content {
-    width: 100%; /* Use full width for smaller screens */
-    margin-left: 0; 
+    width: 100%;
+    margin-left: 0;
     display: flex;
     flex-direction: column-reverse;
   }
 
   .about-description {
-    min-width: 100%; /* Use full width for smaller screens */
+    min-width: 100%;
     font-size: 19px;
     text-align: justify;
     margin-top: -20px;
-    margin-left: 0; /* Remove left margin for smaller screens */
+    margin-left: 0;
   }
 
   .right-div {
-    width: 100%; /* Use full width for smaller screens */
-    text-align: center; /* Center-align the content */
+    width: 100%;
+    text-align: center;
   }
 
   .right-div img {
-    max-width: 60%; /* Adjust the maximum width of the image */
-    height: auto; /* Maintain the aspect ratio */
-    display: block; /* Center the image horizontally */
-    margin: 0 auto; /* Center the image horizontally */
+    max-width: 70%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
   }
-
 
 
   #Sills-title {
-    min-width: 100%; /* Use full width for smaller screens */
-    margin-left: 0; /* Remove left margin for smaller screens */
+    min-width: 100%;
   }
 
   #skills {
-    min-width: 100%; /* Use full width for smaller screens */
-    margin-left: 0; /* Remove left margin for smaller screens */
+    min-width: 100%;
+    margin-left: 0;
   }
 
   #skills div {
@@ -940,39 +934,38 @@ body.dark-mode {
   }
 
   .skills-card {
-    width: 160px;
+    width: 180px;
     height: 55px;
     margin-top: 10px;
+    justify-content: space-around;
   }
 
-  /* Uncomment the following code if you want to make project cards responsive */
-  
   .Project {
-    flex-direction: column; 
+    flex-direction: column;
     align-items: center;
   }
 
   .project-card {
-    width: 70%; 
+    width: 70%;
     margin-bottom: 20px;
   }
- 
+
 }
 
 @media (max-width: 619px) {
   body {
     box-sizing: border-box;
-    overflow-x: hidden; /* Prevent horizontal scrolling */
+    overflow-x: hidden;
   }
 
   #Sills-title {
-    min-width: 100%; /* Use full width for smaller screens */
-    margin-left: 0; /* Remove left margin for smaller screens */
+    min-width: 100%;
+    margin-left: 0;
   }
 
   #skills {
-    min-width: 100%; /* Use full width for smaller screens */
-    margin-left: 0; /* Remove left margin for smaller screens */
+    min-width: 100%;
+    margin-left: 0;
   }
 
   #skills div {
@@ -981,19 +974,13 @@ body.dark-mode {
     gap: 10px;
   }
 
-  .skills-card {
-    width: 160px;
-    height: 55px;
-    margin-top: 10px;
-  }
-
   .Project {
-    flex-direction: column; /* Stack project cards vertically on smaller screens */
-    align-items: center; /* Center-align project cards */
+    flex-direction: column;
+    align-items: center;
   }
 
   .project-card {
-    width: 90%; /* Adjust the width to make it full width on smaller screens */
+    width: 90%;
   }
 }
 
@@ -1004,52 +991,51 @@ body.dark-mode {
     margin-top: 5rem;
     padding: 50px 0;
   }
-  
+
   .home-text {
     display: flex;
     flex-direction: column;
   }
-
-
-  
-  
-
 }
+
 
 
 
 @media (max-width: 619px) {
-  
   .github {
-    width: 100%; 
-    align-items: center; /* Center-align content vertically */
-    justify-content: center; /* Center-align content horizontally */
-    text-align: center; /* Center-align text within the cards */
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
   }
 
-  /* Adjust the card sizes for smaller screens */
   .github a img {
-    width: 80%; /* Adjust the width of the images */
-    max-width: 500px; /* Set a maximum width to prevent them from becoming too large */
-    height: auto; /* Maintain the aspect ratio */
+    width: 80%;
+    max-width: 500px;
+    height: auto;
   }
-
 }
+
+
+
 @media (max-width: 430px) {
   #Sills-title {
-    min-width: 100%; /* Use full width for smaller screens */
-    margin-left: 0; /* Remove left margin for smaller screens */
+    min-width: 100%;
+    margin-left: 0;
   }
 
   #skills {
-    min-width: 100%; /* Use full width for smaller screens */
-    margin-left: 0; /* Remove left margin for smaller screens */
+    min-width: 100%;
+    margin-left: 0;
   }
 
   #skills div {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    /* gap: 10px; */
+  }
+
+  .box22 {
+    width: 80%;
   }
 
   .skills-card {
@@ -1059,20 +1045,19 @@ body.dark-mode {
   }
 
   .github {
-    width: 100%; /* Set the width to 100% for smaller screens */
-    align-items: center; /* Center-align content vertically */
-    justify-content: center; /* Center-align content horizontally */
-    text-align: center; /* Center-align text within the cards */
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
   }
 
-  /* Adjust the card sizes for smaller screens */
   .github a img {
-    width: 90%; /* Adjust the width of the images */
-    max-width: 300px; /* Set a maximum width to prevent them from becoming too large */
-    height: auto; /* Maintain the aspect ratio */
+    width: 90%;
+    max-width: 300px;
+    height: auto;
   }
-  .contact-list{
+
+  .contact-list {
     display: block;
   }
-
 }
