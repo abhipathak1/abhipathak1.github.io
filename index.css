@@ -799,9 +799,7 @@ body.dark-mode {
     outline: none;
 }
 
-#nav-toggle-button:hover {
-    color: #555; /* Icon color on hover */
-}
+
 
 /* Show the nav-list when the 'active' class is added */
 #nav-links.active {
@@ -827,15 +825,12 @@ body.dark-mode {
 .nav-list.active a {
   display: block;
   padding: 10px 0;
-  color: #ff7300;
+  color: #000;
   font-size: larger;
   text-decoration: none;
   transition: color 0.3s ease;
+  
 }
-
-
-
-
 
 .nav-list.active li:not(:last-child) {
   border-bottom: 3px solid #ff7300;
