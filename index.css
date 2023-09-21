@@ -693,60 +693,48 @@ input:checked:before {
 
 
 /* Dark mode */
+
 body.dark-mode {
   background-color: #17202a;
-  /* Dark blue-gray background color */
   color: #dcdde1;
-  /* Light gray text color */
 }
 
 .dark-mode #nav-menu {
   background-color: #1f2c38;
-  /* Dark blue background color */
   color: #dcdde1;
-  /* Light gray text color */
 }
 
 .dark-mode #nav-menu li a {
   color: #dcdde1;
-  /* Light gray text color */
 }
 
 .dark-mode #github-home {
   color: #dcdde1;
-  /* Light gray text color */
 }
 
 .dark-mode .section-title {
   color: #dcdde1;
-  /* Light gray text color */
 }
 
 .dark-mode #skills {
   background-color: #17202a;
-  /* Dark blue-gray background color */
 }
 
 .dark-mode .skills-card {
   background-color: #dee4ea;
-  /* Teal-blue background color */
 }
 
 .dark-mode .skills-card:hover {
   background-color: #4e6d8c;
-  /* Lighter teal-blue background color */
   color: #17202a;
-  /* Dark blue-gray text color */
 }
 
 .dark-mode #projects {
   background-color: #17202a;
-  /* Dark blue-gray background color */
 }
 
 .dark-mode .project-card {
   background-color: #17202a;
-  /* Dark blue-gray background color */
   box-shadow: 0 2px 5px rgba(220, 221, 225, 0.2);
 }
 
@@ -756,27 +744,22 @@ body.dark-mode {
 
 .dark-mode .project-card:hover {
   box-shadow: 0 6px 10px #dcdde1;
-  /* Light gray box shadow */
 }
 
 .dark-mode .techs {
   color: #dcdde1;
-  /* Light gray text color */
 }
 
 .dark-mode .project-description {
   color: #dcdde1;
-  /* Light gray text color */
 }
 
 .dark-mode #contact {
   background-color: #17202a;
-  /* Dark blue-gray background color */
 }
 
 .dark-mode #nav-links.active {
   background-color: rgba(23, 32, 42, 0.99);
-  /* Adjust the opacity value (0.8) as needed */
 }
 
 
@@ -789,7 +772,7 @@ body.dark-mode {
 }
 
 
-/* Responsive styles for tablet Screen */
+
 
 
 /* transition on scrolling */
