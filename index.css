@@ -122,12 +122,6 @@ body {
 }
 
 
-
-
-
-
-
-
 /* -----------------Navbar------------------------- */
 /* -----------------Navbar------------------------- */
 
@@ -368,7 +362,6 @@ body {
 
 .box22 {
   max-width: 960px;
-  /* width: 55%; */
   margin: 0 auto;
   margin-top: 40px;
   background: linear-gradient(to right, #03173e, #42609c);
@@ -759,7 +752,8 @@ body.dark-mode {
 }
 
 .dark-mode #nav-links.active {
-  background-color: rgba(23, 32, 42, 0.99);
+  /* background-color: rgba(23, 32, 42, 0.99); */
+  background-color: #1f2c38;
 }
 
 
@@ -789,10 +783,11 @@ body.dark-mode {
 
 
 
-/* ////////---- Respnsive ////////----*/
+/* ////////---- Responsive ////////----*/
 
 
 @media (max-width: 770px) {
+
   body {
     overflow-x: hidden;
   }
@@ -867,6 +862,8 @@ body.dark-mode {
   }
 }
 
+
+
 @media (max-width: 768px) {
   body {
     box-sizing: border-box;
@@ -932,7 +929,6 @@ body.dark-mode {
     width: 70%;
     margin-bottom: 20px;
   }
-
 }
 
 @media (max-width: 619px) {
