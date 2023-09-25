@@ -71,6 +71,8 @@ checkVisibility();
 
 
 
+
+
 const toggleButton = document.getElementById('nav-toggle-button');
 const navList = document.getElementById('nav-links');
 const navLinks = document.querySelectorAll('.nav-list a'); // Select all menu links within the nav-list

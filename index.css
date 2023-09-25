@@ -1,5 +1,9 @@
 /* Global styles */
 
+html{
+  scroll-behavior: smooth;
+}
+
 body {
   /* font-family: Arial, sans-serif; */
   box-sizing: border-box;
