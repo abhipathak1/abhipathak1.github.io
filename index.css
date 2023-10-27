@@ -139,12 +139,13 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: #fff;
+  background-color: white;
   padding: 10px 20px;
   z-index: 1000;
   color: black;
-  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  /* box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px; */
 }
+
 
 
 .nav-list {
@@ -160,16 +161,15 @@ body {
 }
 
 .nav-list li a {
-
   text-decoration: none;
   position: relative;
-  margin-right: 20px;
+  margin-right: 10px;
   color: black;
   cursor: pointer;
   text-decoration: none;
-  font-size: 20px;
+  font-size: 18px;
+  font-weight: 500;
   transition: color 0.3s ease;
-
 }
 
 .nav-list li a::after {
@@ -643,7 +643,7 @@ body {
 
 /* dark mode slider  */
 input {
-  --s: 25px;
+  --s: 22px;
   /* adjust this to control the size*/
 
   height: calc(var(--s) + var(--s)/5);
@@ -697,7 +697,7 @@ body.dark-mode {
 }
 
 .dark-mode #nav-menu {
-  background-color: #1f2c38;
+  background-color: #17202a;
   color: #dcdde1;
 }
 
@@ -757,7 +757,7 @@ body.dark-mode {
 
 .dark-mode #nav-links.active {
   /* background-color: rgba(23, 32, 42, 0.99); */
-  background-color: #1f2c38;
+  background-color: #17202a;
 }
 
 
@@ -817,7 +817,7 @@ body.dark-mode {
     display: flex;
     flex-direction: column;
     position: absolute;
-    top: 83px;
+    top: 72px;
     width: 100%;
     left: 0;
     background-color: rgba(255, 255, 255, 0.98);
