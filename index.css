@@ -11,6 +11,7 @@ body {
   padding: 0;
   letter-spacing: 0.2px;
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  overflow-x: hidden;
 }
 
 
@@ -326,16 +327,22 @@ body {
 
 .about-content .left-div {
   animation: slide-in-left 1s forwards;
+  flex: 1;
+  min-width: 0;
 }
 
 .right-div img {
-  width: 2000px;
-  height: 300px;
+  width: 100%;
+  max-width: 350px;
+  height: auto;
+  display: block;
 }
 
 .about-content .right-div {
-
   animation: slide-in-right 1s forwards;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
 }
 
 @keyframes slide-in-left {
@@ -847,13 +854,11 @@ body.dark-mode {
 
   #home {
     width: 100%;
-    margin-left: 10px;
-    display: flex;
+    box-sizing: border-box;
   }
 
   #socials li {
     font-size: 10px;
-    margin-top: -80px;
   }
 
   #user-detail-name {
@@ -896,13 +901,11 @@ body.dark-mode {
 
   .right-div {
     width: 100%;
-    text-align: center;
+    justify-content: center;
   }
 
   .right-div img {
     max-width: 70%;
-    height: auto;
-    display: block;
     margin: 0 auto;
   }
 
@@ -941,9 +944,31 @@ body.dark-mode {
 }
 
 @media (max-width: 619px) {
-  body {
-    box-sizing: border-box;
-    overflow-x: hidden;
+  #home {
+    margin-top: 5rem;
+    padding: 50px 0;
+  }
+
+  .home-text {
+    display: flex;
+    flex-direction: column;
+  }
+
+  #user-detail-intro {
+    font-size: 18px;
+  }
+
+  #socials {
+    margin-left: 0;
+    margin-top: 20px;
+  }
+
+  #mypic {
+    text-align: center;
+  }
+
+  #mypic img {
+    margin-left: 0;
   }
 
   #Sills-title {
@@ -970,26 +995,7 @@ body.dark-mode {
   .project-card {
     width: 90%;
   }
-}
 
-
-
-@media (max-width: 619px) {
-  #home {
-    margin-top: 5rem;
-    padding: 50px 0;
-  }
-
-  .home-text {
-    display: flex;
-    flex-direction: column;
-  }
-}
-
-
-
-
-@media (max-width: 619px) {
   .github {
     width: 100%;
     align-items: center;
@@ -1023,13 +1029,19 @@ body.dark-mode {
   }
 
   .box22 {
-    width: 80%;
+    width: 90%;
+    padding: 1rem;
   }
 
   .skills-card {
-    width: 140px;
+    width: 100%;
     height: 55px;
     margin-top: 10px;
+  }
+
+  .home-img {
+    width: 200px;
+    height: 200px;
   }
 
   .github {
