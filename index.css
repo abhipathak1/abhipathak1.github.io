@@ -37,7 +37,7 @@ body {
   text-align: end;
 }
 
-#Sills-title {
+#skills-title {
   max-width: 960px;
   margin: 0 auto;
   display: flex;
@@ -440,6 +440,22 @@ body {
   font-size: 20px;
 }
 
+.earlier-projects {
+  max-width: 1040px;
+  margin: 0 auto 30px;
+  padding: 10px 0 20px;
+  border-top: 1px solid #d8d8d8;
+}
+
+.earlier-projects summary {
+  max-width: 1000px;
+  margin: 0 auto 12px;
+  cursor: pointer;
+  font-size: 20px;
+  font-weight: 700;
+  color: #ff7300;
+}
+
 .project-card {
   width: 45%;
   padding: 1rem;
@@ -748,6 +764,10 @@ body.dark-mode {
   box-shadow: 0 6px 10px #dcdde1;
 }
 
+.dark-mode .earlier-projects {
+  border-top-color: #3d4650;
+}
+
 .dark-mode .techs {
   color: #dcdde1;
 }
@@ -907,7 +927,7 @@ body.dark-mode {
   }
 
 
-  #Sills-title {
+  #skills-title {
     min-width: 100%;
   }
 
@@ -946,7 +966,7 @@ body.dark-mode {
     overflow-x: hidden;
   }
 
-  #Sills-title {
+  #skills-title {
     min-width: 100%;
     margin-left: 0;
   }
@@ -1007,7 +1027,7 @@ body.dark-mode {
 
 
 @media (max-width: 430px) {
-  #Sills-title {
+  #skills-title {
     min-width: 100%;
     margin-left: 0;
   }
